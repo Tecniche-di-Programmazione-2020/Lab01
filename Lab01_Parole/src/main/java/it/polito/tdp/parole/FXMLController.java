@@ -37,6 +37,7 @@ public class FXMLController {
     void doInsert(ActionEvent event) {
     	String txt="";
     	elenco.addParola(txtParola.getText());
+    	txtParola.clear();
     	for(String s:elenco.getElenco()) {txt+=s+"\n";}
     	txtResult.setText(txt);
     	
