@@ -27,5 +27,15 @@ public class Parole {
 		lista.clear();
 	}
 	
+	public boolean cancella(String p) {
+		if(lista.remove(p)==true)return true;
+		
+			
+		else return false;
+		
+		
+	}
+	
+	
 	
 }

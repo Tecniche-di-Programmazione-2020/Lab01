@@ -32,6 +32,19 @@ public class FXMLController {
 
     @FXML
     private Button btnReset;
+    @FXML
+    private Button btnCancella;
+    @FXML
+    void doCancella(ActionEvent event) {
+    	if(elenco.cancella(txtParola.getText())==false)txtResult.appendText("ERRORE\n");
+    	else {
+    	String txt="";
+    	txtParola.clear();
+    	for(String s:elenco.getElenco()) {txt+=s+"\n";}
+    	txtResult.setText(txt);
+    	}
+
+    }
 
     @FXML
     void doInsert(ActionEvent event) {
@@ -46,6 +59,8 @@ public class FXMLController {
     @FXML
     void doReset(ActionEvent event) {
     	elenco.reset();
+    	txtParola.clear();
+    	txtResult.clear();
     }
 
     @FXML
