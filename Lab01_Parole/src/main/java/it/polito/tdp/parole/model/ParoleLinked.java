@@ -4,11 +4,11 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Parole {
+public class ParoleLinked {
 	List<String> lista;	
 	
 
-	public Parole() {
+	public ParoleLinked() {
 		lista=new LinkedList<String>();
 		//TODO
 	}
