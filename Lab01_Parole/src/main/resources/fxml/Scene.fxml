@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.parole.FXMLController">
    <top>
@@ -35,14 +36,53 @@
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <bottom>
-      <HBox alignment="TOP_RIGHT" BorderPane.alignment="CENTER">
+      <HBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnCancella" mnemonicParsing="false" onAction="#doCancella" text="Cancella ">
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <Label alignment="TOP_RIGHT" contentDisplay="CENTER" text="Calcolo Tempi">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="0.0">
+                     <children>
+                        <Label text="LinkedList">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="timeLinkedList">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="ArrayList">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="timeArrayList">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets right="30.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="btnCancella" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#doCancella" text="Cancella ">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnReset" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#doReset" text="Reset" />
+            <Button fx:id="btnReset" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#doReset" text="Reset" />
          </children>
          <BorderPane.margin>
             <Insets top="10.0" />

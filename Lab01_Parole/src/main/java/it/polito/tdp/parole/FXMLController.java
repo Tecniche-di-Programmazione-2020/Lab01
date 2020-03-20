@@ -31,6 +31,12 @@ public class FXMLController {
 
     @FXML
     private TextArea txtResult;
+    
+    @FXML
+    private TextField timeLinkedList;
+
+    @FXML
+    private TextField timeArrayList;
 
     @FXML
     private Button btnReset;
@@ -146,9 +152,12 @@ public class FXMLController {
         elenco2 = new ParoleLinked() ;
     }
     
-    void graficaUpdate(List<String> lista,long clcTimeLinked,long clcTimeArray ) {
-    	if(lista==null) {txtResult.appendText("ERRORE\n");return;}
-    	
+    void graficaUpdate(List<String> lista,Long clcTimeLinked,Long clcTimeArray ) {
+    	if(lista==null) {txtResult.appendText("ERRORE\n");
+    	timeLinkedList.setText(Long.toString(clcTimeLinked));
+    	timeArrayList.setText(Long.toString(clcTimeArray));return;}
+    	timeLinkedList.setText(Long.toString(clcTimeLinked));
+    	timeArrayList.setText(Long.toString(clcTimeArray));
     	String txt="";
     	txtParola.clear();
     	for(String s:lista) {txt+=s+"\n";}
